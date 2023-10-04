@@ -6,3 +6,9 @@
 .common-button {
   @apply btn bg-[#FF3811]  hover:bg-[#FF3811] text-white px-5 font-semibold;
 }
+.active {
+  @apply font-bold text-xl;
+}
+.not-active {
+  @apply font-bold text-xl;
+}
