@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* common css */
+.common-button {
+  @apply btn bg-[#FF3811]  hover:bg-[#FF3811] text-white px-5 font-semibold;
+}
