@@ -2,7 +2,7 @@ import about1 from "../../../assets/images/about_us/person.jpg";
 import about2 from "../../../assets/images/about_us/parts.jpg";
 const AboutUs = () => {
   return (
-    <section className="mt-24">
+    <section className="my-24">
       <h1 className="text-[#FF3811] text-2xl text-center mb-12 font-bold">
         About Us
       </h1>
