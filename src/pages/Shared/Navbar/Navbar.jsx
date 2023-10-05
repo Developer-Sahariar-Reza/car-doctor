@@ -88,7 +88,7 @@ const Navbar = () => {
         <Link className="text-xl mr-6">
           <FaMagnifyingGlass />
         </Link>
-        <a className="btn">Button</a>
+        <a className="common-button2">Appointment</a>
       </div>
     </div>
   );
