@@ -1,6 +1,25 @@
+import { useContext } from "react";
 import loginImg from "../../assets/images/login-reg/login.svg";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
+
+  const handleSignIn = (event) => {
+    event.preventDefault;
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
   return (
     <section className="container mx-auto my-20 grid grid-cols-2 gap-10 justify-center items-center">
       <div>
@@ -9,7 +28,7 @@ const Login = () => {
       <div className="border p-14 rounded-lg border-[#D0D0D0]">
         <h1 className="text-center text-3xl font-bold mb-8">Login</h1>
 
-        <form>
+        <form onSubmit={handleSignIn}>
           <div className="form-control w-full mx-auto mb-5">
             <label className="label">
               <span className="label-text font-bold">Email</span>
